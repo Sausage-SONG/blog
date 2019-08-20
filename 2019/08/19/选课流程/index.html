@@ -258,6 +258,7 @@
 <p>以上图中的ACCT2010举个例子。第一行是这门的课号&quot;ACCT 2010&quot;已经名称&quot;Principles of Accounting I&quot;，然后这是一门3分课。而下面的表格则是这门课的所有section，每个section的时间，地点，授课教授。最后面的四个数字<strong>Quota</strong>，<strong>Enrolled</strong>，<strong>Available</strong>，<strong>Waiting</strong>，分别代表了每个section的总名额，已经有多少人选上了，还剩多少名额，现在有多少人在排队。</p>
 <p>这里要介绍的点比较多：</p>
 <ol>
+<li>Section后面括号里面的四位数字是什么：这是一个section的独一无二的代码，在选课的时候输入这个代码来代指这个section。</li>
 <li>Quota数字的下划线是什么：代表有些名额是定向的，比如这门课的部分名额是为SBM商院学生预留的。也就意味着可能出现明明还有名额，但是却有人在排队的迷惑情况。</li>
 <li>为什么已经有人选上了一门课，不是还没开始选课吗：预选课，或者别人比你早选课。</li>
 <li>Available为0之后还可以add这门课吗：可以，你会进入waitlist排队，当有人drop的时候就会从waitlist中按顺序安排enroll。</li>
@@ -270,7 +271,7 @@
 <ol>
 <li>有的课<strong>Remarks</strong>里面有一个<strong>Consent</strong>，这些课需要授课教授同意你才能enroll，很特殊的课，一般第一学期碰不上。</li>
 <li>有的Section是R或者什么开头的，同上你应该遇不到。</li>
-<li>有的课会标注一个**[Matching between Lecture &amp; Tutorial required]**，就是说Lecture和Tuto或者Lab的组合不能随意，L1就要上T1A，T1B，LA1，以此类推。未标注的就随意搭配。</li>
+<li>有的课会标注一个<strong>Matching between Lecture &amp; Tutorial required</strong>，就是说Lecture和Tuto或者Lab的组合不能随意，L1就要上T1A，T1B，LA1，以此类推。未标注的就随意搭配。</li>
 </ol>
 <p>然后找好了一门课之后，还需要大致了解下课怎么样。要么去找上过的人问，我上过<a href="https://sausage-song.github.io/blog/2019/07/07/%E8%AF%BE%E4%BB%B6/">这些课</a>，有需要的话可以随时问我，要么就要去课评网站去找其他人写的评价。这里说两个<a href="https://ust.space/review" target="_blank" rel="noopener">USTSPACE</a>和<a href="http://ug.msss.ust.hk/cwiki_home" target="_blank" rel="noopener">Cwiki</a>。课评是一个很主观的东西，所以不见得能够反映课程的客观情况，而且每个人的背景，情况都不完全相同，所以只能把它作为一个参考。</p>
 <h1><span id="排课">排课</span></h1>
@@ -282,10 +283,39 @@
 <h1><span id="选课">选课</span></h1>
 <p>整个计划制定完成后，需要去<a href="https://sisprod.psft.ust.hk/psp/SISPROD/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSS_STUDENT_CENTER.GBL?pslnkid=Z_HC_SSS_STUDENT_CENTER_LNK&amp;FolderPath=PORTAL_ROOT_OBJECT.Z_HC_SSS_STUDENT_CENTER_LNK&amp;IsFolder=false&amp;IgnoreParamTempl=FolderPath%2cIsFolder" target="_blank" rel="noopener">SIS</a>选课。因为目前还系统还没有开放，所以也没办法给大家截图做具体介绍，后续有时间我会补上。Workshop一定要认真听讲哦。</p>
 <p>这里就先简单说下选课时间，大家的选课时间应该是22/23号下午（具体哪一天忘了）。同时，并不是全年级所有人都在同一个时间选课，大一内部的所有人也会被分到先后的4到5个时间段内选课。如果你脸黑被分到了较晚的那一批，那局势就比较残酷了，大一选课的良好的心态应该是尽量争取但结果fo系。每年两个学期的选课批次是会综合平衡的，所以不会一直脸黑。查看选课时间的路径是SIS-&gt;Enroll-&gt;term information-&gt;view my enrollment dates。同时这里也是期末看考试安排和成绩的地方。</p>
-<p>后续我尽量搞个视频挂上来，比较直观。</p>
+<p>选课的操作在SIS中完成，在主页的Academics栏下点击任意一个选项进入选课界面。</p>
+<p><img src="https://i.loli.net/2019/08/20/aXbnBfoKRckl45C.png" alt="Tabs"></p>
+<p>可以看到一共有四个大的标签。第一个标签<strong>Search</strong>是用来找一门课的，这个标签其实可有可无，我们完全可以用之前<strong>找课</strong>中提到的网站代替它。第二个标签<strong>Plan</strong>有两个功能，一是管理购物车，二是查看你上过的所有课。第三个<strong>Enroll</strong>就很有用了，一共有5个字标签。</p>
+<ol>
+<li>
+<p>my class schedule<br>
+用来查看本学期的已经选上的课程，和还在排队的课程以及排队名次。</p>
+</li>
+<li>
+<p>add<br>
+用来添加一门课程，当还没有正式选课的时候，课程会添加到你的购物车中，这样正式选课只要&quot;下单&quot;就好了，节省了一些时间，所以尽量提前把想上的课都加到购物车。加课的时候需要用到之前提到的section的四位代码，可以用任何一个section的代码，如果你用的是Lecture的代码，那么后续系统会让你选择想要的Lab和Tuto的。</p>
+</li>
+</ol>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tKwEsrhhcKs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<ol start="3">
+<li>
+<p>drop &amp; swap<br>
+系统未开放，后续加。</p>
+</li>
+<li>
+<p>term information<br>
+在这里可以看你的选课时间，本学期期末考试的时间（一般提前一个月出）以及各门课的成绩。</p>
+</li>
+</ol>
+<p>最后一个大的标签是<strong>My Academics</strong>，可以看你的Advisor，transcript，credit transfer和course history。</p>
 <h1><span id="其他">其他</span></h1>
 <p>选完课之后就是Add Drop Period了，直到开学的第二个星期末尾时结束。在这个时间段内，课表都是不确定的，你可以drop你听了两次觉得不好的课，可以swap去一门课的另一个时间段，或者swap去另外一门课，可以add一门新的课。不出意外，更多的时间你都会在等某些课的waitlist。这段时间要勤查SIS，时刻关注wl名次，还在等的课最好也先去听课，不然万一很晚enroll上就掉了很多内容了。</p>
-<p>另外有的课要写Wavier才能上，时间不够了，我后续再加。</p>
+<p>另外有的课需要写waivor才能上，waivor就是当你不满足一门课的Prerequisite但是却仍然想上这门课的时候需要提交的申请，在申请中你需要陈述理由来说服这门课的instructor，让他相信即使你没有prerequisite但是仍然有能力上这门课。另外可能你还需要上传相关文件辅助证明。我写过waivor的课主要就是一些prerequisite是香港DSE考试成绩的课，作为内地生我们肯定是拿不满足条件的，但是可以提供高考成绩来证明我们是可以上的。</p>
+<p>还有就是学院帮你预选的课，如果你想drop，那么你可以先试一下能不能drop，大概率是不能的，这个时候也需要写申请，阐述你要drop这门课的理由，经相关教授批准后才能drop。</p>
+<p>最后就是如果想选超过学分限制的课（credit overload），也需要提前写申请，声明想要申请的总学分，理由以及证明材料。</p>
+<p>以上提到的这三个申请，都在<a href="https://ss.ust.hk/ssea/courseApprovalRequest.do" target="_blank" rel="noopener">同一个网站</a>写，这个网站的入口也是Myportal，叫<strong>Class Enrollment Request</strong>。这里就用申请Overload的视频来演示一下。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ebfWIHdCTXo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>申请被批准或者被拒绝都会有邮件通知，不同教授审批申请的速度有快有慢，所以一定尽早写申请，留出充分的时间，最好在正式选课开始前能够拿到结果，否则错过抢课时机。像我的这个申请是Golin半分钟之后批准的，之前也碰到过两三天才批的。</p>
 <p><strong><em>Good Luck!</em></strong></p>
 
                 
