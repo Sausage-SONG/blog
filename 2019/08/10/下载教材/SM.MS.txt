@@ -1,7 +1,0 @@
-amazon,https://sm.ms/image/FdjvIkwOhel1YCx,https://i.loli.net/2019/08/10/FdjvIkwOhel1YCx.png
-cover,https://sm.ms/image/KotD5L3ZGBXdAju,https://i.loli.net/2019/08/10/KotD5L3ZGBXdAju.jpg
-detail,https://sm.ms/image/CZ7kMNOup6DhnaG,https://i.loli.net/2019/08/10/CZ7kMNOup6DhnaG.png
-download,https://sm.ms/image/n69mkoFRspNuCAV,https://i.loli.net/2019/08/10/n69mkoFRspNuCAV.png
-field,https://sm.ms/image/MDcpSb6umaFXtsd,https://i.loli.net/2019/08/10/MDcpSb6umaFXtsd.png
-ISBNResult,https://sm.ms/image/Q4SOToYqKAc6lkH,https://i.loli.net/2019/08/10/Q4SOToYqKAc6lkH.png
-libgen,https://sm.ms/image/UTtjR8MH9Sh2xAJ,https://i.loli.net/2019/08/10/UTtjR8MH9Sh2xAJ.png
