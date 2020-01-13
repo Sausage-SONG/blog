@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Sizhe Song
+          SauDrive - Sizhe Song
         
     </title>
 
-    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/archives/">
+    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/2019/08/24/SauDrive/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/blog/undefined')
-            /*page*/
+            background-image: url('https://i.loli.net/2019/08/25/gSha9W7IiRpL4BA.png')
+            /*post*/
         
     }
     
@@ -87,10 +87,24 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>Sizhe Song</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">Sausage&#39;s Blog</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/blog/tags/#经验" title="经验">经验</a>
+                            
+                              <a class="tag" href="/blog/tags/#Onedrive" title="Onedrive">Onedrive</a>
+                            
+                              <a class="tag" href="/blog/tags/#Aliyun" title="Aliyun">Aliyun</a>
+                            
+                              <a class="tag" href="/blog/tags/#资源" title="资源">资源</a>
+                            
+                        </div>
+                        <h1>SauDrive</h1>
+                        <h2 class="subheading">使用Onedrive的文件分享网站</h2>
+                        <span class="meta">
+                            Posted by Sizhe Song on
+                            2019-08-24
+                        </span>
                     </div>
                 
 
@@ -193,107 +207,157 @@
 
 
     <!-- Main Content -->
-    
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
+    <!-- Modify by Yu-Hsuan Yen -->
 
-             <!-- 归档列表 -->
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>最近上GRE整个人已经上迷糊了，之前一直在写Summer的SQL的笔记，准备这次回家写完的，现在看来是要拖更了。趁今天晚上没作业捣鼓了一下这个文件分享网站，已经Publish了，欢迎测试:)。真的不擅长取名字，所以偷懒就叫<strong>SauDrive</strong>了。</p>
+<p><a href="https://sausage-song.github.io/sauDrive/">SauDrive</a></p>
+<p>所参考的教程是地铁上刷知乎刷到的：<a href="https://zhuanlan.zhihu.com/p/74538287" target="_blank" rel="noopener">OneIndex-Serverless</a>。OneIndex我之前也了解过，因为曾经想把博客里面的图片和视频存在Onedrive里面来访问，然鹅OneIndex需要一台服务器来实现，直接劝退了。</p>
+<p>而这个OneIndex-Serverless是一个无服务器版，虽然功能阉割了很多，但是吃土玩家也可以鼓捣一下了，正常使用按照现在（2019/8/24）阿里云的计价规则几乎是没有费用的。实现的具体原理目前正在研究中，Web这一块现在还是知识盲区，真的越学越觉得什么都不会。好在教程写的比较清楚，这里只是简单提一下。</p>
+<p>需要的原材料有：</p>
+<ol>
+<li>一个阿里云账户</li>
+<li>一个Onedrive账户（这个项目会访问全部文件，如果介意的话也许你需要一个空白的账号）</li>
+<li>一个Github Repo用来开Github Page</li>
+</ol>
+<p>过程中唯一需要注意的一点，也是教程里没有说清楚的，就是在复制main.py到阿里云的时候，需要把阿里云提供的skeleton覆盖掉，保留会报错。</p>
+<p>最终的成品就是一个文件分享网站，跟Onedrive原生分享链接相比，优点是内地访问更快（我的阿里云服务在深圳），界面更简洁，直链下载。但是缺点也蛮多的，没有预览，没有权限管理（所以之前分享的课件不好移植到这上面来），不支持访客上传…之后可以完全公开的文件我就尽量放到这上面来吧。潜力还有待开发，反正工程量微乎其微，先搞上来再说。</p>
+
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-24
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/24/SauDrive/" style="color: #0085a1">
-                        <span>
-                            SauDrive
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-18
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/18/选课流程/" style="color: #0085a1">
-                        <span>
-                            选课流程
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-10
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/10/UROP日记/" style="color: #0085a1">
-                        <span>
-                            UROP日记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-06
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/07/06/课件/" style="color: #0085a1">
-                        <span>
-                            课件
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-01
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/07/01/制作签名/" style="color: #0085a1">
-                        <span>
-                            制作签名
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/blog/2019/08/18/选课流程/" data-toggle="tooltip" data-placement="top" title="选课流程">Next Post &rarr;</a>
+                        </li>
+                    
                 </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
             </div>
             
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
 
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="nav">none</ol>
+        
+        </div>
+      </aside>
+    
 
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/blog/tags/#经验" title="经验">经验</a>
+                        
+                          <a class="tag" href="/blog/tags/#Onedrive" title="Onedrive">Onedrive</a>
+                        
+                          <a class="tag" href="/blog/tags/#Aliyun" title="Aliyun">Aliyun</a>
+                        
+                          <a class="tag" href="/blog/tags/#资源" title="资源">资源</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://qiutedyuan.github.io/blog/index.html" target="_blank">Yuan Qiu</a></li>
+                    
+                        <li><a href="https://www.glitchso.me/" target="_blank">Zeyu Huang</a></li>
+                    
+                </ul>
+                
+            </div>
         </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '>'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->
