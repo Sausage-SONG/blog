@@ -14,11 +14,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Sizhe Song
+          rclone - 多云盘管理工具 - Sizhe Song
         
     </title>
 
-    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/tags/Onedrive/">
+    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/2020/05/27/rclone-多云盘管理工具/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
@@ -69,8 +69,8 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('/blog/undefined')
-            /*page*/
+            background-image: url('')
+            /*post*/
         
     }
     
@@ -87,10 +87,24 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 
-                    <div class="site-heading">
-                        <h1>Sizhe Song</h1>
-                        <!--<hr class="small">-->
-                        <span class="subheading">Sausage&#39;s Blog</span>
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/blog/tags/#Onedrive" title="Onedrive">Onedrive</a>
+                            
+                              <a class="tag" href="/blog/tags/#云盘" title="云盘">云盘</a>
+                            
+                              <a class="tag" href="/blog/tags/#Google Drive" title="Google Drive">Google Drive</a>
+                            
+                              <a class="tag" href="/blog/tags/#rclone" title="rclone">rclone</a>
+                            
+                        </div>
+                        <h1>rclone - 多云盘管理工具</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by Sizhe Song on
+                            2020-05-27
+                        </span>
                     </div>
                 
 
@@ -193,176 +207,162 @@
 
 
     <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p><strong>rclone</strong>是一个云盘管理工具，能够实现在一个窗口下管理多个云盘上的文件，完成云盘与本地之间，云盘与云盘之间的数据迁移，等等功能。</p>
+<h1><span id="起因">起因</span></h1>
+<p>因为即将毕业，也不清楚之后能不能留在科大，所以保存在科大Onedrive账户中的接近30G的文件得想办法搬出来。当然，30G其实并不算大，一个晚上应该就能全部下到移动硬盘里面。但是已经习惯了用Onedrive和Google Drive全平台同步文件，如果下载到本地又得花时间全部上传一遍。Google了一下，发现微软提供有一个自动化脚本来在多个Onedrive账户之间迁移文件，但是好像不支持Onedrive For Business，也可能是我没有找到。然后想到去用微软给的API自己写一个，但是每个平台的API都不同，如果是Google Drive又得全部新学一遍，感觉有点劝退我这种多云盘用户。最后不知道在哪里了解到了rclone这个工具。</p>
+<p>rclone支持几乎所有主流云盘，包括但不限于Onedrive，Google Drive，Dropbox，Amazon Drive，Mega，甚至可以连(S)FTP。由于整合了各家的API，你只需要学习一遍rclone的API就可以愉快地使用所有的这些云盘了。</p>
+<h1><span id="下载amp配置">下载&amp;配置</span></h1>
+<p><a href="https://rclone.org/" target="_blank" rel="noopener">rclone官网</a>提供了下载链接，支持Windows/Linux/macOS等系统。Linux下只需要运行这个命令即可。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl https://rclone.org/install.sh | sudo bash</span><br></pre></td></tr></table></figure>
+<p>Windows系统下载的是一个名为<code>rclone.exe</code>的可执行文件，需要在命令行中配合参数使用。</p>
+<p>安装好rclone之后，就可以开始配置了。这一步就是将你的云盘连结到rclone，并给rclone读写的权限。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rclone config</span><br></pre></td></tr></table></figure>
+<p>这一句命令进入配置界面，接下来就只需要跟着菜单一步一步走就行了，选项都还挺好懂的。需要说明的可能是<strong>client_id</strong>和<strong>client_secret</strong>这两个，如果嫌麻烦可以不填直接按回车，这样rclone就会用官方提供的公共API账户。根据官网中的说明，官方会持续关注公共API的使用情况，如果出现拥堵就会添加新的。实际使用下来公共API是完全够用的，如果想用自己的，可以在<a href="https://rclone.org/docs/" target="_blank" rel="noopener">官网</a>找到不同云盘生成client_id/secret的教程。</p>
+<link rel="stylesheet" type="text/css" href="sshsharer.css">
+<sshsharer-player src="hello_world.cast"></sshsharer-player>
+<script src="sshsharer.js"></script>
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/blog/2020/06/07/rclone-多云盘管理工具/sshsharer/" data-toggle="tooltip" data-placement="top" title="">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/blog/2020/05/25/使用Labelme标注Skeleton/" data-toggle="tooltip" data-placement="top" title="使用Labelme标注Skeleton">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
     
-<!-- Main Content -->
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!-- 归档列表 -->
-            
-            
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">起因</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#null"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">下载&amp;配置</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
 
-             <!-- 归档列表 -->
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
 
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2020">
-                    <span class="tag-text">2020</span>
-                </span>
-                <ul>
+                <!-- Featured Tags -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    06-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2020/06/07/rclone-多云盘管理工具/sshsharer/" style="color: #0085a1">
-                        <span>
-                            Untitled
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/blog/tags/#Onedrive" title="Onedrive">Onedrive</a>
+                        
+                          <a class="tag" href="/blog/tags/#云盘" title="云盘">云盘</a>
+                        
+                          <a class="tag" href="/blog/tags/#Google Drive" title="Google Drive">Google Drive</a>
+                        
+                          <a class="tag" href="/blog/tags/#rclone" title="rclone">rclone</a>
+                        
+                    </div>
+                </section>
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    06-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2020/06/07/rclone-多云盘管理工具/sshsharer/" style="color: #0085a1">
-                        <span>
-                            Untitled
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
+
+                <!-- Friends Blog -->
                 
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-27
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2020/05/27/rclone-多云盘管理工具/" style="color: #0085a1">
-                        <span>
-                            rclone - 多云盘管理工具
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    05-25
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2020/05/25/使用Labelme标注Skeleton/" style="color: #0085a1">
-                        <span>
-                            使用Labelme标注Skeleton
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://qiutedyuan.github.io/blog/index.html" target="_blank">Yuan Qiu</a></li>
+                    
+                        <li><a href="https://www.glitchso.me/" target="_blank">Zeyu Huang</a></li>
+                    
                 </ul>
+                
             </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-calendar-times-o listing-seperator" id="2019">
-                    <span class="tag-text">2019</span>
-                </span>
-                <ul>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-25
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/25/SauDrive/" style="color: #0085a1">
-                        <span>
-                            SauDrive
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-19
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/19/选课流程/" style="color: #0085a1">
-                        <span>
-                            选课流程
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    08-10
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/08/10/UROP日记/" style="color: #0085a1">
-                        <span>
-                            UROP日记
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-07
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/07/07/课件/" style="color: #0085a1">
-                        <span>
-                            课件
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <li >
-                    07-02
-                    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
-                    <a href="/blog/2019/07/02/制作签名/" style="color: #0085a1">
-                        <span>
-                            制作签名
-                        </span>
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </li>
-                
-                </ul>
-            </div>
-            
-
-
         </div>
     </div>
-</div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '>'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
 
     <!-- Footer -->
     <!-- Footer -->

@@ -51,13 +51,6 @@
     </url>
 
     <url>
-        <loc>https://sausage-song.github.io/blog/tags/Onedrive/</loc>
-        <lastmod>2019-08-24T16:14:38.616Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>https://sausage-song.github.io/blog/tags/%E7%BB%8F%E9%AA%8C/</loc>
         <lastmod>2019-08-24T16:14:38.616Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -72,15 +65,43 @@
     </url>
 
     <url>
-        <loc>https://sausage-song.github.io/blog/tags/%E8%B5%84%E6%BA%90/</loc>
-        <lastmod>2020-05-18T08:51:25.824Z</lastmod>
+        <loc>https://sausage-song.github.io/blog/tags/FYP/</loc>
+        <lastmod>2020-05-25T17:01:04.892Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
 
     <url>
-        <loc>https://sausage-song.github.io/blog/tags/FYP/</loc>
-        <lastmod>2020-05-25T17:01:04.892Z</lastmod>
+        <loc>https://sausage-song.github.io/blog/tags/Onedrive/</loc>
+        <lastmod>2020-06-07T14:56:45.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sausage-song.github.io/blog/tags/%E4%BA%91%E7%9B%98/</loc>
+        <lastmod>2020-06-07T14:56:45.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sausage-song.github.io/blog/tags/Google-Drive/</loc>
+        <lastmod>2020-06-07T14:56:45.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sausage-song.github.io/blog/tags/rclone/</loc>
+        <lastmod>2020-06-07T14:56:45.475Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>https://sausage-song.github.io/blog/tags/%E8%B5%84%E6%BA%90/</loc>
+        <lastmod>2020-09-21T05:45:45.695Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
