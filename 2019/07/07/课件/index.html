@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/blog/img/icon.jpg">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          课件 - Beantech | 豆科技
+        
+    </title>
+
+    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/2019/07/07/课件/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/blog/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/blog/css/highlight.css">
+
+    <link rel="stylesheet" href="/blog/css/widget.css">
+
+    <link rel="stylesheet" href="/blog/css/rocket.css">
+
+    <link rel="stylesheet" href="/blog/css/signature.css">
+
+    <link rel="stylesheet" href="/blog/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('https://i.loli.net/2019/08/04/ZfXRFYmzUoLGxqt.jpg')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/blog/img/signature/Sau_white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/blog/tags/#资源" title="资源">资源</a>
+                            
+                        </div>
+                        <h1>课件</h1>
+                        <h2 class="subheading">分享部分课程资料</h2>
+                        <span class="meta">
+                            Posted by Sizhe Song on
+                            2019-07-07
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://sausage-song.github.io/">Sizhe's Homepage</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+
+
+                    
+
+
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/about/">About</a>
+                        </li>
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>整理了一下Onedrive里面文件保存相对齐全的课程的资料，一般包括课件，习题，Lab等等。课程链接需要以ITSC登录后才能查看。</p>
+<ul>
+<li>
+<p>COMP</p>
+<ul>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EljZS-LCmxNKssPMWdkRLwIBcRwjSgpLRLA9tAmMg-VAow?e=WnaHwd" target="_blank" rel="noopener">2011</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EtcGq0TYTvVNhXnumP3qGOQBZSUZwkbImUk13OunrhJqsQ?e=yxV3MG" target="_blank" rel="noopener">2012</a> (2018 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EkgM_GMhBLJNgTmosvA2_RABSr1y43r_uAOQCc2MBDcgrg?e=PM9Meh" target="_blank" rel="noopener">2611</a> (2018 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EiK0X_NMfzVCiZcD6hXIpqYBKT7p8cmLnozQn4Nh-F6ijw?e=YT6yy1" target="_blank" rel="noopener">2711</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EtueH7ym5FxNkxAtrHjgrCkBTUUmmMEDS7Clusl5YveVVw?e=KbYcR5" target="_blank" rel="noopener">3111</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EuRfqvcMjS1NvJvLXo0hEJkBpe2GOzNvkyHQ34Ez3q_gNw?e=hYChjg" target="_blank" rel="noopener">3511</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EmeTs8TEgUNNoMkOyiySyUMBgvBqJn55MCToeEQaKjFazw?e=QM5fUK" target="_blank" rel="noopener">3311</a> (2019 Summer)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EqY7Y4HChF5JhFemz3JrakUBJImviTaaRQ_MBLYGxX3bxw?e=vJWeyn" target="_blank" rel="noopener">3711H</a> (2019 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EtzwoYYErr1NogwhZ6PWCKoBVN5Ul0BugO3AsB8ZpxQxoA?e=Y8xFph" target="_blank" rel="noopener">CS 37300</a> (2020 Spring) (Machine Learning @Purdue)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EqST2AzJ9plAqYzqddeT_M8BiuD-bw4yt6TbhdbP6ygwUw?e=CCuaiV" target="_blank" rel="noopener">CS 42600</a> (2020 Spring) (Computer Security @Purdue)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EtmzcPurum1GjMO46EMxakYBi5I99roe2F4AS2-wb6urDQ?e=mzyRvn" target="_blank" rel="noopener">ECE 36800</a> (2020 Spring) (Data Structure @Purdue)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EhG_L86h5OBItp4W8vzit1sB_sV_tNQe9M2npXE-SyfFrQ?e=kuJsMM" target="_blank" rel="noopener">4901L</a> (2020 Fall)</li>
+</ul>
+</li>
+<li>
+<p>MATH</p>
+<ul>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EhGlDDkhGpNBgfsHL2HIihsBN23TegPEudo4WuSV5Bgn6w?e=KN5LLo" target="_blank" rel="noopener">1013</a> (2017 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/ElzUwRLxq0hDromZie4dTKUBsZWLCsJeHa8ELnau__dSwg?e=LdMrVn" target="_blank" rel="noopener">1014</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/ErZtrWCs-RpAihL8iAXSEUIByFtzN2dJNb73mjerXLstnA?e=4SY3ER" target="_blank" rel="noopener">2023</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EpGCwkmP8iFLk4gmBbcOj68BjEJTGxWs-Vu-WhzW23mrDg?e=FIqNND" target="_blank" rel="noopener">2033</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Ekr-0X8u16hLk12tw4P8O0sB6W1_J6wWHMwtQFv9xUzR9w?e=3RnsM7" target="_blank" rel="noopener">2121</a> (2018 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Em7Lwr5YXW9Fl6GMtEZ8x3wBzUojfOgFNCUkfFrCDuQA6g?e=eGmbTJ" target="_blank" rel="noopener">2351</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Em7rA2qeS5dAuzDJ8S0tfZ0BmnoQbJYtCUZlz2wX5zkmLw?e=htz0dq" target="_blank" rel="noopener">2411</a> (2018 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Er2H47DwL4JMm7bjOENdWTgB1BMncEuEaSYnsdrytHvUtw?e=H5x4LJ" target="_blank" rel="noopener">2511</a> (2019 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Eqw_4K4fW-5LlR14b2UGPtoB7o6pvWRy5oQKW9i7SnaVhQ?e=OcByxu" target="_blank" rel="noopener">3033</a> (2019 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Egg2p96TRctImYEoISbamTgB8oGvhIFKr7_lAIVsY1A9-w?e=5z1B9P" target="_blank" rel="noopener">MA 45300</a> (2020 Spring) (Abstract Algebra @Purdue)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/En9haBtHbfZOk3B62bvM88gBJT-SLLFhm356DNeZBNm1HA?e=KEKgVb" target="_blank" rel="noopener">3312</a> (2020 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Eoe_V2QwIw5MrAgcVPK5NVgBOY5M3TPHLkoUCBcCc9zo2A?e=gEgw3x" target="_blank" rel="noopener">4432</a> (2020 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EvgYdSWBjtFBoEuYiC5PM5gB6XmcOdq7QpBbSu4Kzo13IA?e=AF3nEt" target="_blank" rel="noopener">4321</a> (2021 Spring)</li>
+</ul>
+</li>
+<li>
+<p>Other</p>
+<ul>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Eizjv1hZ5EBKp95mF6vWUncBppGOymy99Y5dSt1JphkFsQ?e=WbofDQ" target="_blank" rel="noopener">PHYS 1003</a> (2019 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EgLObyWee1tHus2tktbdHWQBcdxsQrCeEh9HjHs2HT1EQw?e=LAaO5p" target="_blank" rel="noopener">PHYS 1112</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Eg5JAxjhfcNDuMg_Km9e0uUBmB5efO36ays6KS-6F6dbXg?e=SYddMt" target="_blank" rel="noopener">SOSC 1960</a> (2018 Summer)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/ErO0sDNvqqRIgoyWduXlvSwBwKvqUBwYQhF1MuU_s0CNJA?e=qUaiMe" target="_blank" rel="noopener">LIFS 1010</a> (2017 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EoceyG_ZyIhIiSuz60lagXYBECcvUeVYGQ9GDomrDlWIsg?e=i3IGwq" target="_blank" rel="noopener">ECON 2103</a> (2019 Fall)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EnDwm8VwjvBLmco6btD_y44Bd2Uu2imiqrCCIliG9rv92g?e=BouiGS" target="_blank" rel="noopener">HUMA 1000A</a> (2021 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/Enp31dtdM6JDvCge2W3Twf8BLFQzEcsP1r3IfHwij5g4Qg?e=Fz32wb" target="_blank" rel="noopener">HUMA 1060</a> (2021 Spring)</li>
+</ul>
+</li>
+</ul>
+<p>下面是一些没上过但存过课件的课，可能文件不是很齐。</p>
+<ul>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EsC049JeNIFMrKU4d65rZUYBgjrRR_0wiBW2rJETzAbKBw?e=mvC2HX" target="_blank" rel="noopener">COMP 1022P</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EuqAW_dT5RNPua6rVP6c5KYBAwLjuR5OTFNyVDzfDrpCqw?e=SJNdSV" target="_blank" rel="noopener">COMP 1022Q</a> (2018 Spring)</li>
+<li><a href="https://hkustconnect-my.sharepoint.com/:f:/g/personal/ssongad_connect_ust_hk/EmsG7fqrvaJHmUpj2wLudjwBV3NmyC6QLMlmOiiEI3x26g?e=AMs2Ml" target="_blank" rel="noopener">COMP 4021</a> (2018 Summer)</li>
+</ul>
+<p>链接失效请联系<a href="mailto:hereissausage@gmail.com" target="_blank" rel="noopener">我</a>更新。</p>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/blog/2019/08/10/UROP日记/" data-toggle="tooltip" data-placement="top" title="UROP日记">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/blog/2019/07/02/制作签名/" data-toggle="tooltip" data-placement="top" title="制作签名">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/blog/tags/#资源" title="资源">资源</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://quitedyuan.github.io/blog/index.html" target="_blank">Yuan Qiu</a></li>
+                    
+                        <li><a href="https://www.glitchso.me" target="_blank">Zeyu Huang</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '>'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/Sausage-SONG">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Sizhe Song 2021 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/blog/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/blog/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/blog/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sausage-song.github.io/blog/blog/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+    <script type="text/javascript" src="/test/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/test/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<!-- <img src="https://sausage-song.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

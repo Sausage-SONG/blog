@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content>
+    <meta name="keyword" content>
+    <link rel="shortcut icon" href="/blog/img/icon.jpg">
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          使用Labelme标注Skeleton - Beantech | 豆科技
+        
+    </title>
+
+    <link rel="canonical" href="https://sausage-song.github.io/blog/blog/2020/05/25/使用Labelme标注Skeleton/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/blog/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/blog/css/beantech.min.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/blog/css/highlight.css">
+
+    <link rel="stylesheet" href="/blog/css/widget.css">
+
+    <link rel="stylesheet" href="/blog/css/rocket.css">
+
+    <link rel="stylesheet" href="/blog/css/signature.css">
+
+    <link rel="stylesheet" href="/blog/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('https://i.loli.net/2020/05/26/2ViUBLH6Ntlz3FK.png')
+            /*post*/
+        
+    }
+    
+    #signature{
+        background-image: url('/blog/img/signature/Sau_white.png');
+    }
+    
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/blog/tags/#FYP" title="FYP">FYP</a>
+                            
+                        </div>
+                        <h1>使用Labelme标注Skeleton</h1>
+                        <h2 class="subheading">2020 Summer FYP</h2>
+                        <span class="meta">
+                            Posted by Sizhe Song on
+                            2020-05-25
+                        </span>
+                    </div>
+                
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="https://sausage-song.github.io/">Sizhe's Homepage</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/blog/">Home</a>
+                    </li>
+
+
+                    
+
+
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/about/">About</a>
+                        </li>
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+
+                        
+                        <li>
+                            <a href="/blog/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <p>这篇笔记约定了如何使用<strong>Labelme</strong>来纠正已有数据中错误的skeleton</p>
+<h1 id="安装labelme">安装Labelme</h1>
+<ol>
+<li>
+<p>在Anaconda中新建一个环境，用于安装Labelme。这里用Anaconda Prompt做演示</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create --name=labelme</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>进入这个新建的环境</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate labelme</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装依赖pyqt，这是一个python的GUI包</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pyqt</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>安装Labelme</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install labelme</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>安装好之后每次使用时只需要打开Anaconda Prompt，进入labelme环境，然后使用命令<code>labelme</code>即可</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">labelme</span><br></pre></td></tr></table></figure>
+<h1 id="下载服务器上的skeleton图片">下载服务器上的skeleton图片</h1>
+<p>将已经生成好的skeleton图片从服务器上下载到本地。路径为</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/ssongad/skeleton_img/&lt;classname&gt;</span><br></pre></td></tr></table></figure>
+<p>为了避免可能的重复劳动，约定宋思哲从字母<strong>正序</strong>开始检查，倪啸元从字母<strong>逆序</strong>开始检查。另外，为了方便查看进度，在以下路径已经建好两个<code>txt</code>文本，在完成下载和完成检查之后都可以记录到文本中</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/data/ssongad/ssongad_log.txt</span><br><span class="line">/data/ssongad/xniac_log.txt</span><br></pre></td></tr></table></figure>
+<h1 id="配置labelme">配置Labelme</h1>
+<p>按上述方式运行Labelme后</p>
+<ol>
+<li>打开一个视频文件夹，对应的路径格式为<code>&lt;yourLocalPath&gt;/&lt;classname&gt;/&lt;classname&gt;_&lt;index&gt;</code>，比如<code>...workspace\skeleton_img\abseiling\abseiling_000</code><br>
+<img src="https://i.loli.net/2020/05/26/9HxfgYWkFwIaSpi.png" alt="打开文件夹" title="打开文件夹"></li>
+<li>更改输出路径，否则默认输出到图片的同路径，为了方便后续操作，我们要输出到一个单独的文件夹中。先新建好输出文件夹，格式应该与图片保持一致，即<code>&lt;classname&gt;/&lt;classname&gt;_&lt;index&gt;</code>。然后将这个文件夹设置成输出文件夹<br>
+<img src="https://i.loli.net/2020/05/26/JBgFCNpcwK5ltnk.png" alt="更改输出文件夹" title="更改输出文件夹"></li>
+<li>打开自动保存，否则每次询问是否保存<br>
+<img src="https://i.loli.net/2020/05/26/6hDeLa3Q89ZsVUn.png" alt="打开自动保存" title="打开自动保存"></li>
+</ol>
+<h1 id="开始检查">开始检查</h1>
+<p>如果skeleton正确，或者部分正确，则对于这一部分无须任何操作。<strong>只需要</strong>重新标记那些识别<strong>错误</strong>的关节即可。首先，约定的关节序号如下<br>
+<img src="https://i.loli.net/2020/05/26/CcXKy8eianOxwRf.png" alt="关节序号" title="关节序号"><br>
+上图中的左边即为人物的左手，你可以认为这个人背对着你，相应节点的含义已在右侧给出。需要注意的是，0号关节是鼻子，虽然大多数时候它看起来像头部。眼睛和耳朵有数据但并未在skeleton中画出，本次检查也不需要管这两个关节。<br>
+关节之间的连接颜色也在图中给出了，左右半侧并不对称，可以依据这一点判断skeleton是否左右颠倒。尚不清楚左右颠倒是否影响未来的操作，但最好全部订正一遍。</p>
+<p>我们需要做的操作就是标记关节的位置，Labelme有提供标记点模式，需要手动打开<br>
+<img src="https://i.loli.net/2020/05/26/Ur3Sevb2mFBdPhN.png" alt="打开标记点模式" title="打开标记点模式"></p>
+<p>然后只需要在图片上点击正确的关节位置，就可以创建一个标记点，然后会弹出窗口要求输入label，输入关节对应的序号即可<br>
+<img src="https://i.loli.net/2020/05/26/dAEePGKjsiglp3k.png" alt="输入关节序号" title="输入关节序号"></p>
+<p>一张图中可以标记数个点，全部完成后可以直接前往下一张图片，节点信息会以一个<code>json</code>文件的形式自动输出到指定的路径下<br>
+<img src="https://i.loli.net/2020/05/26/JUoK4L9w7xMF8DW.png" alt="前往下一张图片" title="前往下一张图片"></p>
+<h1 id="完成">完成</h1>
+<p>注意每完成一个video之后，都需要重新设置<strong>输出路径</strong>，然后继续工作。完成一个class之后，可以把整个class的文件夹上传到服务器的如下路径</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/data/ssongad/labelme/</span><br></pre></td></tr></table></figure>
+
+                
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/blog/2019/08/19/选课流程/" data-toggle="tooltip" data-placement="top" title="选课流程">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <!-- duoshuo Share start -->
+                
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start -->
+                
+                <!-- 多说评论框 end -->
+
+                <!-- disqus comment start -->
+                
+                <!-- disqus comment end -->
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#安装labelme"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">安装Labelme</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#下载服务器上的skeleton图片"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">下载服务器上的skeleton图片</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#配置labelme"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">配置Labelme</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#开始检查"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">开始检查</span></a></li><li class="toc-nav-item toc-nav-level-1"><a class="toc-nav-link" href="#完成"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">完成</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/blog/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/blog/tags/#FYP" title="FYP">FYP</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="https://quitedyuan.github.io/blog/index.html" target="_blank">Yuan Qiu</a></li>
+                    
+                        <li><a href="https://www.glitchso.me" target="_blank">Zeyu Huang</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: '>'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/Sausage-SONG">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; Sizhe Song 2021 
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://beantech.org">BeanTech</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=YenYuHsuan&repo=hexo-theme-beantech&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/blog/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/blog/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/blog/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("https://sausage-song.github.io/blog/blog/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+    <script type="text/javascript" src="/test/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/test/js/toc.js?v=1.0.0" async=""></script>
+<!-- Image to hack wechat -->
+<!-- <img src="https://sausage-song.github.io/blog/blog/img/icon_wechat.png" width="0" height="0" /> -->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>

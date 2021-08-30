@@ -1,0 +1,5 @@
+ccc,https://sm.ms/image/YzflyhcHRS5t7dT,https://i.loli.net/2019/08/19/YzflyhcHRS5t7dT.png
+comp,https://sm.ms/image/P1u6DV8h2KzBIeH,https://i.loli.net/2019/08/19/P1u6DV8h2KzBIeH.png
+courseNProgram,https://sm.ms/image/StO1r7xBPuUINak,https://i.loli.net/2019/08/19/StO1r7xBPuUINak.png
+courses,https://sm.ms/image/sYdR7felm5kTyHX,https://i.loli.net/2019/08/19/sYdR7felm5kTyHX.png
+tabs,https://sm.ms/image/aXbnBfoKRckl45C,https://i.loli.net/2019/08/20/aXbnBfoKRckl45C.png
