@@ -139,7 +139,7 @@
 
                         
                         <li>
-                            <a href="/blog/about/">About</a>
+                            <a href="/blog/archive/">Archives</a>
                         </li>
                         
                     
@@ -147,7 +147,7 @@
 
                         
                         <li>
-                            <a href="/blog/archive/">Archives</a>
+                            <a href="/blog/about/">About</a>
                         </li>
                         
                     
@@ -205,6 +205,12 @@
             <!-- 标签云 -->
             <div id='tag_cloud' class="tags">
                 
+                    <a href="#笔记" title="笔记" rel="1">笔记</a>
+                
+                    <a href="#SQL" title="SQL" rel="0">SQL</a>
+                
+                    <a href="#Database" title="Database" rel="0">Database</a>
+                
                     <a href="#云盘" title="云盘" rel="0">云盘</a>
                 
                     <a href="#Google Drive" title="Google Drive" rel="0">Google Drive</a>
@@ -219,17 +225,7 @@
                 
                     <a href="#资源" title="资源" rel="1">资源</a>
                 
-                    <a href="#笔记" title="笔记" rel="1">笔记</a>
-                
-                    <a href="#UROP" title="UROP" rel="1">UROP</a>
-                
-                    <a href="#Python" title="Python" rel="1">Python</a>
-                
-                    <a href="#CV" title="CV" rel="1">CV</a>
-                
-                    <a href="#SQL" title="SQL" rel="0">SQL</a>
-                
-                    <a href="#Database" title="Database" rel="0">Database</a>
+                    <a href="#FYP" title="FYP" rel="1">FYP</a>
                 
                     <a href="#UZER.ME" title="UZER.ME" rel="1">UZER.ME</a>
                 
@@ -237,12 +233,56 @@
                 
                     <a href="#PMP" title="PMP" rel="1">PMP</a>
                 
-                    <a href="#FYP" title="FYP" rel="1">FYP</a>
+                    <a href="#UROP" title="UROP" rel="1">UROP</a>
+                
+                    <a href="#Python" title="Python" rel="1">Python</a>
+                
+                    <a href="#CV" title="CV" rel="1">CV</a>
                 
             </div>
 
             <!-- 标签列表 -->
 
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="笔记">
+                    <span class="tag-text">笔记</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/blog/2019/08/10/UROP日记/">
+                        <h2 class="post-title">
+                            UROP日记
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                2019 Summer UROP
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="SQL">
+                    <span class="tag-text">SQL</span>
+                </span>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Database">
+                    <span class="tag-text">Database</span>
+                </span>
+                
+            </div>
             
             <div class="one-tag-list">
                 <span class="fa fa-tag listing-seperator" id="云盘">
@@ -282,25 +322,6 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/blog/2019/08/10/UROP日记/">
-                        <h2 class="post-title">
-                            UROP日记
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                2019 Summer UROP
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
                      <a href="/blog/2019/07/02/制作签名/">
                         <h2 class="post-title">
                             制作签名
@@ -327,6 +348,25 @@
                         
                             <h3 class="post-subtitle">
                                 HKUST选课流程介绍
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/blog/2019/08/10/UROP日记/">
+                        <h2 class="post-title">
+                            UROP日记
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                2019 Summer UROP
                             </h3>
                         
                     </a>
@@ -370,8 +410,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="笔记">
-                    <span class="tag-text">笔记</span>
+                <span class="fa fa-tag listing-seperator" id="FYP">
+                    <span class="tag-text">FYP</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -379,111 +419,19 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/blog/2019/08/10/UROP日记/">
+                     <a href="/blog/2020/05/25/使用Labelme标注Skeleton/">
                         <h2 class="post-title">
-                            UROP日记
+                            使用Labelme标注Skeleton
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                2019 Summer UROP
+                                2020 Summer FYP
                             </h3>
                         
                     </a>
                     <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
                 </div>
                 <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="UROP">
-                    <span class="tag-text">UROP</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/blog/2019/08/10/UROP日记/">
-                        <h2 class="post-title">
-                            UROP日记
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                2019 Summer UROP
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Python">
-                    <span class="tag-text">Python</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/blog/2019/08/10/UROP日记/">
-                        <h2 class="post-title">
-                            UROP日记
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                2019 Summer UROP
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="CV">
-                    <span class="tag-text">CV</span>
-                </span>
-                
-                  <!-- <li class="listing-item">
-                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-                  </li> -->
-                 <div class="post-preview">
-                     <a href="/blog/2019/08/10/UROP日记/">
-                        <h2 class="post-title">
-                            UROP日记
-                        </h2>
-                        
-                            <h3 class="post-subtitle">
-                                2019 Summer UROP
-                            </h3>
-                        
-                    </a>
-                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
-                </div>
-                <hr>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="SQL">
-                    <span class="tag-text">SQL</span>
-                </span>
-                
-            </div>
-            
-            <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="Database">
-                    <span class="tag-text">Database</span>
-                </span>
                 
             </div>
             
@@ -566,8 +514,8 @@
             </div>
             
             <div class="one-tag-list">
-                <span class="fa fa-tag listing-seperator" id="FYP">
-                    <span class="tag-text">FYP</span>
+                <span class="fa fa-tag listing-seperator" id="UROP">
+                    <span class="tag-text">UROP</span>
                 </span>
                 
                   <!-- <li class="listing-item">
@@ -575,13 +523,65 @@
                   <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
                   </li> -->
                  <div class="post-preview">
-                     <a href="/blog/2020/05/25/使用Labelme标注Skeleton/">
+                     <a href="/blog/2019/08/10/UROP日记/">
                         <h2 class="post-title">
-                            使用Labelme标注Skeleton
+                            UROP日记
                         </h2>
                         
                             <h3 class="post-subtitle">
-                                2020 Summer FYP
+                                2019 Summer UROP
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="Python">
+                    <span class="tag-text">Python</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/blog/2019/08/10/UROP日记/">
+                        <h2 class="post-title">
+                            UROP日记
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                2019 Summer UROP
+                            </h3>
+                        
+                    </a>
+                    <!-- <p class="post-meta">{{ post.date | date:"%Y-%m-%d" }}</p> -->
+                </div>
+                <hr>
+                
+            </div>
+            
+            <div class="one-tag-list">
+                <span class="fa fa-tag listing-seperator" id="CV">
+                    <span class="tag-text">CV</span>
+                </span>
+                
+                  <!-- <li class="listing-item">
+                  <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+                  <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+                  </li> -->
+                 <div class="post-preview">
+                     <a href="/blog/2019/08/10/UROP日记/">
+                        <h2 class="post-title">
+                            UROP日记
+                        </h2>
+                        
+                            <h3 class="post-subtitle">
+                                2019 Summer UROP
                             </h3>
                         
                     </a>
